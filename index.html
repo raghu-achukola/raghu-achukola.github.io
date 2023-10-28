@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Your Website Title</title>
+    <script src = "static/load.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class = "pp-container">
+                <img class="profile-pic" src = "img/profile_pic.jpg"/>
+            </div>
+            <div class = "navigation-container">
+                <div class = "my-name">Raghu Achukola </div>
+                <div class = "social-links">
+                    <a href="http://linkedin.com/in/raghuveer-achukola" class="fa fa-linkedin"></a>
+                    <a href="http://github.com/raghu-achukola" class="fa fa-github"></a>
+                </div>
+                <div class = "sectionlist-container">
+                    <button id="section_about_me" class = "site-section" onclick="loadPage(this);">
+                        About Me
+                    </button>
+                    <button id="section_projects" class = "site-section" onclick="loadPage(this);">
+                        Projects
+                    </button>
+                    <button id="section_data_blog" class = "site-section" onclick="loadPage(this);">
+                        Data Blog
+                    </button>
+                    <button id="section_personal" class = "site-section" onclick="loadPage(this);">
+                        Personal
+                    </button>
+                    <button id="section_contact_me" class = "site-section" onclick="loadPage(this);">
+                        Contact Me
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
 
+            <div id = "section-content">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
