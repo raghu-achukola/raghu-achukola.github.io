@@ -9,17 +9,17 @@ body, h1, div, h2, p {
 .container {
     display: flex;
     min-height: 100vh; 
-    max-height: 100vh;
+    height: 100vh;
     align-items: stretch;
-    overflow: none;
+    /* overflow: none; */
 }
 
-.left-column {
+#left-column {
     display: flex;
     overflow: none;
     flex-direction: column;
     flex: 1;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     background: black;
     color: bisque; 
     padding: 15px;
@@ -54,15 +54,15 @@ body, h1, div, h2, p {
     
 }
 
-.right-column {
+#right-column {
     display: flex;
     flex-direction: column;
     flex: 7;
     background: black; 
     max-width: 90vw;
-    max-height: 100vh;
-    overflow: hidden;
-    z-index: -1;
+    /* max-height: 100vh; 
+    overflow: hidden; */
+    z-index: 1;
 
 }
 .sectionlist-container{
@@ -95,7 +95,7 @@ body, h1, div, h2, p {
     padding: 20px;
     position: relative;
     min-height: 100vh ;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     width: 100vw;
 }
 
@@ -117,11 +117,11 @@ opacity: 0.7;
 }
 
 
-@media only screen and (max-width:640px){
+/* @media only screen and (max-width:640px){
     .container{display: block;}
     .left-column{width: 100%;}
     .right-column{width: 100%;}
-}
+} */
 
 
 .blog-background{
@@ -139,7 +139,7 @@ opacity: 0.7;
 .blog-body{
     flex:6;
     height: 90vh;
-    overflow:auto;
+    overflow:auto !important;
     opacity:1 !important;
 }
 
@@ -297,7 +297,6 @@ button.c2b{
 .info-header{
     font-weight:bold;
     font-family: 'Segoe UI';
-    /* color: #ADE0B8; */
 }
 .info-info{
     font-family: 'Segoe UI';

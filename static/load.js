@@ -32,6 +32,11 @@ function mouseScroll(){
 
     
 }
+
+function handleOverflow(hide){
+    const rightSection = document.getElementById('right-column');
+    rightSection.style.zIndex =  hide? -1 : 1;
+}
 function loadPage(element){
     const page_location = `sections/${element.id.substring(8)}.html`;
     get_page_html(page_location).then(
@@ -39,14 +44,20 @@ function loadPage(element){
             insertSectionHTML(page_html);
             if (element.id.substring(8) == 'projects'){
                 mouseScroll();
+                handleOverflow(true);
                 set_arrow_nav();
+            }
+            else if (element.id.substring(8) == 'about_me'){
+                loadIntersectionObserver()
+            }
+            else{
+                handleOverflow(false)
             }
         });
 }
 
 function set_arrow_nav(){
 
-    
     const track = document.getElementById("project-track");
 
     function checkKey(e) {
@@ -92,3 +103,4 @@ function move_track(track, distance){
     }
 
 }
+
