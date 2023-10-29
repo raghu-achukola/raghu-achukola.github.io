@@ -337,6 +337,56 @@ button.c2b{
     margin-top:1em
 }
 
-html{
+/* html{
     scroll-behavior: smooth;
+} */
+
+
+.off-screen{
+    opacity: 0.2;
+    background-color: #080d0e;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out ;
+}
+.on-screen{
+    opacity: 1;
+    background-color: bisque;
+    color:black;
+    transform:translateX(0)
+
+}
+
+
+section{
+    display: grid;
+    
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    height:100vh;
+    min-width: 90vw;
+    color: #d8c8d2;
+
+} 
+
+#about_me_container{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto !important;
+    /* max-height: 100vh; */
+    height:100vh;
+    /* height:200vh; */
+}  
+
+#about_me_container:nth-child(2){
+    transition-delay:500ms
+}
+#about_me_container:nth-child(3){
+    transition-delay:1000ms
+}
+#about_me_container:nth-child(4){
+    transition-delay:1500ms
+}
+#about_me_container:nth-child(5){
+    transition-delay:2000ms
 }

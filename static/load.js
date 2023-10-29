@@ -1,7 +1,37 @@
 
 
+function loadIntersectionObserver(){
+    const hiddenElements = document.querySelectorAll('.off-screen')
+    const options = {
+        root: document.querySelector('#right-section')
+    }
+    const observer = new IntersectionObserver(
+        (entries)=> {
+            
+            console.log('Intersection:', entries);
+            entries.forEach(
+                (entry) => {
+                    console.log(entry)
+                    if (entry.isIntersecting){
+                        console.log('INTERSECT')
+                        entry.target.classList.add('on-screen')
+                        // entry.target.classList.remove('off-screen')
+                    }
+                    else{
+                        entry.target.classList.remove('on-screen')
+                        // entry.target.classList.add('off-screen')
+                    }
+                }
+            )
+        }
+    )
+    console.log(observer)
+    hiddenElements.forEach((el) => observer.observe(el))
+}
+
+
 function insertSectionHTML(html){
-    console.log(html)
+    // console.log(html)
     let sectionElement = document.querySelector("#section-content");
     sectionElement.innerHTML = ""
     sectionElement.insertAdjacentHTML(
