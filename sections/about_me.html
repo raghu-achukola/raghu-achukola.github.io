@@ -1,38 +1,125 @@
 <div id = 'about_me_container' class="container" >
-<section class = 'off-screen'>
-<h2>About Sec 1</h2>
-<p>
-    Is this
-    working?
-</p>
+
+<section id = 'introduction' class = 'off-screen animated-page introduction'>
+    <h2 class="introduction page-header">Introduction</h2>
+    <img id = "introduction-profile-picture" class = "introduction main-picture" src = "img/rags_flowers.jpg"  defaultSrc = "img/rags_flowers.jpg">
+    <div id = 'about-block' class= "introduction info" >
+        <div id = "about-profesh" class = "about-info-block" loadimg = "img/profile_pic.jpg" onmouseenter="loadImg(this)" onmouseleave="resetImg()">
+            Data leader
+        </div>
+        <div id = "about-music" class = "about-info-block" loadimg = "img/festival.JPG" onmouseenter="loadImg(this)" onmouseleave="resetImg()">
+            Explorer of coffeeshops
+        </div>
+        <div id = "about-qball" class = "about-info-block" loadimg = "img/rags_quadball.jpg" onmouseenter="loadImg(this)" onmouseleave="resetImg()">
+            Avid Quadball coach, analyst, and enthusiast
+        </div>
+        <div id = "about-profeh" class = "about-info-block" loadimg = "img/festival.jpg" onmouseenter="loadImg(this)" onmouseleave="resetImg()">
+            Love nature!
+        </div>
+    </div>
+</section>
+<section class = 'animated-page career'>
+    <!-- <h2 class="career page-header">Career</h2>  -->
+    <!-- <img id = "career-profile-picture" class = "career main-picture" src = "img/rags_flowers.jpg"  defaultSrc = "img/rags_flowers.jpg">
+    <button class = "timeline-button">&lt</button>
+    <button class = "timeline-button">&gt</button> -->
+    <div class = "line"></div>
+
+    <button id = "summary-button" class="timeline-button selected" onclick = "displayCareerTimeline(this,'summary')"></button>
+    <button id = "currently-button" class="timeline-button" onclick = "displayCareerTimeline(this,'currently')"></button>
+    <button id = "previously-button" class="timeline-button" onclick = "displayCareerTimeline(this,'previously')"></button>
+    <button id = "other-button" class="timeline-button" onclick = "displayCareerTimeline(this,'other')"></button>
+    <button id = "education-button" class="timeline-button" onclick = "displayCareerTimeline(this,'education')"></button>
+    <div id = "summary" class = "summary timeline-content visible">
+        <div>
+        8+ yrs of experience as a manager and IC leading business strategy, managing data teams, building and deploying 
+        pipelines and AI models, wearing multiple hats across the data ecosystem.  
+        Snowflake certified Advanced Data Engineer, <b>one of less than 50 worldwide</b>
+        </div>
+        <img src = "img/hat.svg" class = "tech-icon">
+        <img src = "img/hat.svg" class = "tech-icon">
+        <img src = "img/hat.svg" class = "tech-icon">
+        <img src = "img/hat.svg" class = "tech-icon">
+        <img src = "img/hat.svg" class = "tech-icon">
+        <img src = "img/hat.svg" class = "tech-icon">
+        <img src = "img/hat.svg" class = "tech-icon">
+    </div>
+    <div id = "currently" class = 'currently timeline-content'>
+        Currently, I work at <b>Nomi Health</b> as the <b>Senior Data Platform Lead</b> .
+
+    </div>    
+    <div id = "previously" class = 'previously timeline-content'>
+        Previous sectors i have domain experience in
+        <ul>
+            <li>Energy</li>
+            <li>Utilies</li>
+            <li>Finance</li>
+            <li>Research</li>
+        </ul>
+    </div>
+    <div id = "other" class = "timeline-content">
+        Other work I have done include
+    </div>
+    <div id = "lead-instructor" class = "other timeline-content">
+        <h3>Lead Instructor</h3>
+        <a href = 'https://techbootcamps.utexas.edu/data/'>UT Data and Analytics Bootcamp </a>
+    </div>
+    <div id = "gameplay-director" class = "other timeline-content">
+        <h3>Director, Gameplay</h3>
+        <a href = 'https://www.mlquadball.com/'>Major League Quadball</a>
+    </div>
+    <div id = "education" class = 'education timeline-content'>
+        <b>University of Texas at Austin 2016</b><br/>
+        B.S in Mathematics, Statistics and Data Science Track <br/>
+        Certificate Program in Applied Statistical Modeling <br/>
+        27 hours of graduate coursework in ML + Statistics
+    </div>
+    
+    <img id = "education-profile-picture" class = "education main-picture timeline-content" src = "img/rags_ut.png"  defaultSrc = "img/rags_ut.png">
+    <!-- <div id = "technologies">
+        <img class = "tech-icon" src = "img/logos/python.svg"/>
+        <img class = "tech-icon" src = "img/logos/SNOW.svg"/>
+        <img class = "tech-icon" src = "img/logos/go.svg"/>
+        <img class = "tech-icon" src = "img/logos/aws.svg"/>
+        <img class = "tech-icon" src = "img/logos/mongo.svg"/>
+        <img class = "tech-icon" src = "img/logos/mysql.svg"/>
+    </div> -->
+    
+</section>
+<section class = 'animated-page interests'>
+    <!-- <h2 class="interest page-header"> Coffeeshop </h2> 
+    <div id = 'interest-box'>
+
+        <div id = 'reading' class = 'vertical-flex brad-list'>
+            <div>a</div>
+            <div>b</div>
+        </div>
+        <div id = 'listening-to' class = 'vertical-flex brad-list'>
+            <div>
+                
+            <img src = 'img/kahneman.jpg' width = "100%" margin = "2em"/>
+
+            </div>
+        </div>
+        <div id = 's-to' class = 'vertical-flex'>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5hAFKx1IMhvx73JA6MSkIP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+            <div>a</div>
+            <div>b</div>
+        </div>
+    </div> -->
 </section>
 
-<section class = 'off-screen'>
-    <h2>About Sec 2</h2>
-    <p>
-        Is this
-        working?
-    </p>
+<section class = 'animated-page quadball'>
+    <h2 class = 'quadball career-header'>Quadball</h2>
+
 </section>
-<section class = 'off-screen'>
+<section class = 'animated-page other-work'>
     <h2>About Sec 3</h2>
     <p>
         Is this
         working?
     </p>
 </section>
-<section class = 'off-screen'>
-    <h2>About Sec 4</h2>
-    <p>
-        Is this
-        working?
-    </p>
-</section>
-<section class = 'off-screen'>
-    <h2>About Sec 5</h2>
-    <p>
-        Is this
-        working?
-    </p>
-</section>
+
 </div>
