@@ -1,7 +1,6 @@
 
-
 function loadIntersectionObserver(){
-    const hiddenElements = document.querySelectorAll('.off-screen')
+    const hiddenElements = document.querySelectorAll('.animated-page')
     const options = {
         root: document.querySelector('#right-section')
     }
@@ -134,3 +133,37 @@ function move_track(track, distance){
 
 }
 
+
+function loadImg(element){
+    const PIC_FRAME = document.getElementById( "introduction-profile-picture" )
+    const newImgSrc = element.getAttribute("loadimg")
+    PIC_FRAME.src = newImgSrc
+}
+
+function resetImg(){
+    // const PIC_FRAME = document.getElementById( "introduction-profile-picture" )
+    // PIC_FRAME.src = PIC_FRAME.getAttribute("defaultSrc")
+}
+
+
+function displayCareerTimeline(selectedButton,classToDisplay){
+    let buttons = document.getElementsByClassName('timeline-button');
+    for (let index = 0; index<buttons.length;index++){
+        let button = buttons[index];
+        button.classList.remove('selected')
+    }
+    selectedButton.classList.add('selected')
+    let content = document.getElementsByClassName('timeline-content');
+    for (let index = 0; index < content.length; index++) {
+        let element = content[index];
+        console.log(element);
+        if (element.classList.contains(classToDisplay)){
+            element.classList.add('visible')
+        }
+        else{
+            element.classList.remove('visible')
+        }
+    }
+
+
+}
