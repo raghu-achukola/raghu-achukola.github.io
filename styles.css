@@ -391,12 +391,25 @@ button.c2b{
 #hats{
     display: flex;
     height: 60vh;
-    grid-area: 2/1/8/1;
+    grid-area: 3/1/8/1;
 
     flex-direction: column;
     justify-content: space-evenly;
 }
 
+#stack{
+    border-radius: 12px;
+    border-style: dashed;
+    border-color: #bf5700;
+    border-width: 0.2em;
+    display: flex;
+    flex-wrap: wrap;
+    height: 60vh;
+    grid-area: 4/2/4/8;
+    justify-content: space-evenly;
+    align-items: stretch;
+    transform: translateY(-5%);
+}
 section{
     display: grid;
     grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
