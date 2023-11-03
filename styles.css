@@ -388,6 +388,14 @@ button.c2b{
 
 }
 
+#hats{
+    display: flex;
+    height: 60vh;
+    grid-area: 2/1/8/1;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
 section{
     display: grid;
