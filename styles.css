@@ -663,3 +663,7 @@ section > *{
 #gameplay-director{
     grid-area: 4/5/5/8 ;
 }
+
+.tech-icon.selected {
+    filter: invert(38%) sepia(22%) saturate(3213%) hue-rotate(360deg) brightness(95%) contrast(105%); /* black -> #bf5700*/
+}
