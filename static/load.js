@@ -123,8 +123,8 @@ function move_track(track, distance){
             let newIndex = Math.max(Math.min(activeIndex+distance,maxIndex),minIndex);
             actualDistance = newIndex-activeIndex
             console.log(`New index: ${newIndex}`)
-            imgs[newIndex].classList.add('active')
             imgs[activeIndex].classList.remove('active')
+            imgs[newIndex].classList.add('active')
             track.style.left = `${25-newIndex*50}%`
             track.style.width = `${75 + newIndex*50}%`
             break;
