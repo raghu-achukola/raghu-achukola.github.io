@@ -18,7 +18,7 @@
         </div>
     </div>
 </section>
-<section class = 'animated-page career'>
+<section id = 'career' class = 'animated-page career'>
     <!-- <h2 class="career page-header">Career</h2>  -->
     <!-- <img id = "career-profile-picture" class = "career main-picture" src = "img/rags_flowers.jpg"  defaultSrc = "img/rags_flowers.jpg">
     <button class = "timeline-button">&lt</button>
@@ -40,15 +40,7 @@
         </div>
 
     </div>
-    <div id = "hats" class = "summary timeline-content visible">
-        <object data = "img/hat.svg" fill = "#bf5700" type="image/svg+xml" class = "tech-icon selected"></object>
-        <object data = "img/hat.svg" type="image/svg+xml" class = "tech-icon"></object>
-        <object data = "img/hat.svg" type="image/svg+xml" class = "tech-icon"></object>
-        <object data = "img/hat.svg" type="image/svg+xml" class = "tech-icon"></object>
-        <object data = "img/hat.svg" type="image/svg+xml" class = "tech-icon"></object>
-        <object data = "img/hat.svg" type="image/svg+xml" class = "tech-icon"></object>
-        <object data = "img/hat.svg" type="image/svg+xml" class = "tech-icon"></object>
-    </div>
+
     <div id = "stack" class = "summary timeline-content visible">
         <figure>
             <img src = "img/logos/python.svg" class = "tech-icon">
@@ -110,7 +102,8 @@
         Currently, I work at <b>Nomi Health</b> as the <b>Senior Data Platform Lead</b> .
 
     </div>    
-    <div id = "previously" class = 'previously timeline-content'>
+    
+    <div id = "previously" class = 'currently timeline-content'>
         Previous sectors i have domain experience in
         <ul>
             <li>Energy</li>
@@ -119,8 +112,97 @@
             <li>Research</li>
         </ul>
     </div>
-    <div id = "other" class = "timeline-content">
-        Other work I have done include
+    <div id = "hats" class = "previously timeline-content " >
+        <img src = "img/hat_colored.svg"   class = "tech-icon selected" data-target = "resume-summary" onclick="hat(this)"/>
+        <img src = "img/hat_black.svg"   class = "tech-icon" data-target="data-manager" onclick="hat(this)"/>
+        <img src = "img/hat_black.svg"   class = "tech-icon" data-target="data-scientist" onclick="hat(this)"/>
+        <img src = "img/hat_black.svg"   class = "tech-icon" data-target="data-engineer" onclick="hat(this)"/>
+        <img src = "img/hat_black.svg"   class = "tech-icon" data-target="dba" onclick="hat(this)"/>
+        <img src = "img/hat_black.svg"   class = "tech-icon" data-target="data-architect" onclick="hat(this)"/>
+        <img src = "img/hat_black.svg"   class = "tech-icon" data-target="devops" onclick="hat(this)"/>
+    </div>
+    <div id = "resume-summary" class = "previously timeline-content resume-section disp">
+        <h1> Interactive Resume</h1>
+        <div>
+            Working at primarily small companies and startups makes you wear a ton of hats!
+            Click the hats to the left to learn more about the various hats I have worn!
+
+        </div>
+    </div>
+    <div id = "data-manager" class = "previously timeline-content resume-section">
+        <h1> Data Platform Manager</h1>
+        <div>
+            <ul>
+                <li>Elevated trust in data and enhanced data quality by spearheading the 
+                    development of a state-of-the-art data observability suite using AWS, Snowflake, 
+                    Datadog, and Streamlit. </li>
+                <li>Designed the hiring and onboarding process for new hires writing all documentation as necessary resulting in 
+                    a 100% 2-yr retention rate</li>
+                <li>Collaborated with Finance, Marketing, and Product to use data to inform future 
+                    product and marketing strategy and identify key KPIs to guide business decisions.</li>
+                <li>Architected and implemented a data governance and RBAC framework, leading to 
+                    streamlined security certifications including SOC-2, HITRUST, and FedRamp</li>
+            </ul>
+        </div>
+    </div>
+    <div id = "data-scientist" class = "previously timeline-content resume-section">
+        <h1> Data Scientist</h1>
+        <div>
+            <ul>
+                <li>Developed a NLP XGBoost model to help automate the medical coding and 
+                    construction of health care claims from raw doctors' notes</li>
+                <li>Identified patterns in TB of energy usage data by scraping various datasets into 
+                    HDFS format and analyzing them using ML algorithms (x-means, SVM, etc.)
+                    </li>
+            </ul>
+        </div>
+    </div>
+    <div id = "data-engineer" class = "previously timeline-content resume-section">
+        <h1> Data Engineer</h1>
+        <div>
+            <ul>
+                <li> Automated collection of medical reference code datasets by building a 
+                    webscraper with BeautifulSoup that collected 10+ GB of medical code information </li>
+                <li>Streamlined ETL pipeline for collecting live trade data from online exchange 
+                    website, resulting in a three-fold increase in data processing speed </li>
+                <li>Built a search capability for GIS app data using Kafka, Couchbase, and 
+                    Elasticsearch. </li>
+                <li>Designed and developed a Python API from scratch using protobuf and Python to 
+                    translate from industry healthcare formats (X12 EDI, FHIR) into our data model. 
+                    </li>
+                <li>Deconstructed and cleaned TBs of energy usage data from various formats into HDFS format using PostgreSQL, Python, Sqoop, and R.</li>
+            </ul>
+        </div>
+    </div>
+    <div id = "dba" class = "previously timeline-content resume-section">
+        <h1> Database Administrator</h1>
+        <div>
+            <ul>
+                <li>Optimized and rearchitected data pipelines in Snowflake, resulting in a 67% 
+                    ($250,000/yr) reduction in operational spend. </li>
+                <li></li>
+            </ul>
+        </div>
+    </div>    
+    <div id = "devops" class = "previously timeline-content resume-section">
+        <h1> Devops/MLOps Engineer</h1>
+        <div>
+            <ul>
+                <li>Sped up time-to-delivery of features by 250% by designing a custom IaC solution in AWS + Snowflake 
+                    using Github Actions, AWS Cloud Formation, and Native snowflake features </li>
+            </ul>
+        </div>
+    </div>
+    <div id = "data-architect" class = "previously timeline-content resume-section">
+        <h1> Data Architect</h1>
+        <div>
+            <ul>
+                <li>Overhauled our analytical capabilities into real-time analytics delivery by 
+                    architecting a data pipeline from our AWS DocumentDB OLTP to our Snowflake 
+                    OLAP using Confluent Kafka, AWS Lambda</li>
+                <li>Established standard architectural patterns to be followed as part of the Architecture Review Board</li>
+            </ul>
+        </div>
     </div>
     <div id = "lead-instructor" class = "other timeline-content">
         <h3>Lead Instructor</h3>
@@ -148,7 +230,7 @@
     </div> -->
     
 </section>
-<section class = 'animated-page interests'>
+<section id = 'interests' class = 'animated-page interests'>
     <!-- <h2 class="interest page-header"> Coffeeshop </h2> 
     <div id = 'interest-box'>
 
@@ -172,11 +254,11 @@
     </div> -->
 </section>
 
-<section class = 'animated-page quadball'>
+<section  id = 'quadball' class = 'animated-page quadball'>
     <h2 class = 'quadball career-header'>Quadball</h2>
 
 </section>
-<section class = 'animated-page other-work'>
+<section id = 'other-work' class = 'animated-page other-work'>
     <h2>About Sec 3</h2>
     <p>
         Is this

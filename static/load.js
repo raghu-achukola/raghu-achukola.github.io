@@ -167,3 +167,27 @@ function displayCareerTimeline(selectedButton,classToDisplay){
 
 
 }
+
+function hat(element){
+    console.log('a')
+    const hats = document.getElementById('hats').getElementsByTagName('*')
+    const currentDisplay = document.querySelector('.resume-section.disp')
+    console.log(currentDisplay)
+    for (let index = 0; index < hats.length; index++) {
+        let ell = hats[index];
+        ell.classList.remove('selected')
+    }
+    element.classList.add('selected')
+    let displayTarget = document.getElementById(element.dataset.target);
+    
+    console.log(displayTarget)
+    currentDisplay.classList.remove('disp')
+    displayTarget.classList.add('disp')
+    // element.src="img/hat_colored.svg"
+}
+
+
+
+function meowNow(){
+    console.log('Meow')
+}

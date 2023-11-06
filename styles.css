@@ -390,9 +390,10 @@ button.c2b{
 
 #hats{
     display: flex;
-    height: 60vh;
-    grid-area: 3/1/8/1;
+    height: 80vh;
+    grid-area: 2/1/7/1;
 
+    z-index: 1;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -567,7 +568,7 @@ section > *{
 }
 
 #currently{
-    grid-area: 2/ 2 / 5 / 4;
+    grid-area: 1/ 2 / 4 / 4;
     border-color: #618B6A;
     border-style: dashed;
     border-width: 0.5em;
@@ -640,10 +641,10 @@ section > *{
 }
 
 #previously{
-    grid-area: 2/ 2 / 5 / 4;
+    grid-area: 3/ 5 / 6 / 7;
     border-color: #618B6A;
     border-style: dashed;
-    border-width: 0.3em;
+    border-width: 0.5em;
 }
 
 #other{
@@ -657,8 +658,13 @@ section > *{
 
 #lead-instructor{
     grid-area: 2/1/3/5;
-}
 
+}
+#lead-instructor > *{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+}
 
 #gameplay-director{
     grid-area: 4/5/5/8 ;
@@ -666,4 +672,66 @@ section > *{
 
 .tech-icon.selected {
     filter: invert(38%) sepia(22%) saturate(3213%) hue-rotate(360deg) brightness(95%) contrast(105%); /* black -> #bf5700*/
+}
+
+nav{
+    position: absolute;
+    z-index: 10;
+    display: grid;
+    width:100vw;
+    height:5em;
+    border: #ffe4c4 solid;
+    background-color: #080d0e;
+    opacity: 0.8;
+    
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw ;
+    /* grid-template-rows: 20vh; */
+    place-items: start;
+    align-content: center;
+}
+
+nav > div{
+    z-index: 11;
+    color: #ffe4c4;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-area: 1/3/1/5;
+}
+
+nav:nth-child(2){
+    font-size: 10em;
+}
+
+
+.resume-section{
+    grid-area: 1/2/5/8;
+    height: 100%;
+    width: 100%;
+    place-self: start;
+    /* border: #bf5700;
+    border-style: solid;
+    border-width: 0.5em; */
+    translate: 5% 10%;
+    user-select: none;
+    color: #ffe4c4;
+    z-index: -1;
+}
+
+.resume-section.disp{
+    color: #080d0e;
+    z-index: 1;
+    user-select: auto;
+    transition: all 0.5s ease-in-out;
+    
+
+}
+
+.resume-section.disp > * {
+    padding: 10px;
+    /* transition: all 0.5s  step-end; */
+}
+.resume-section.disp > div > ul > *  {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* transition: all 0.5s  step-end; */
 }
