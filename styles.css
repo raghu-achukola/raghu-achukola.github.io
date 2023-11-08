@@ -527,17 +527,20 @@ section > *{
 .line {
     height: 97.5vh;
     width:0;
-    grid-area: 3/8/3/8;
+    grid-row: 3;
+    grid-column: 8;
+    
     padding: 0px !important;
     border: 0.3em solid #618B6A;
     margin: 3px;
     display:inline-block;
 }
-#currently-button{
+/* #currently-button{
     grid-area: 1/8/1/8;
-}
+} */
 
 .timeline-button{
+    grid-column: 8;
     background-color: #ffe4c4;
     width: 2em;
     height: 2em;
@@ -545,6 +548,7 @@ section > *{
     border-radius: 50%;
 }
 .timeline-button.selected{
+    grid-column: 8;
     background-color: #618B6A;
     width: 2em;
     height: 2em;
@@ -552,23 +556,23 @@ section > *{
     border-radius: 50%;
 }
 #summary-button{
-    grid-area: 1/8/1/8;
+    grid-row: 1;
 }
-#currently-button{
-    grid-area: 2/8/2/8;
-}
-#previously-button{
+/* #currently-button{
     grid-area: 3/8/3/8;
+} */
+#previously-button{
+    grid-row: 2;
 }
 #other-button{
-    grid-area: 4/8/4/8;
+    grid-row: 3;
 }
 #education-button{
-    grid-area: 5/8/5/8;
+    grid-row: 4;
 }
 
 #currently{
-    grid-area: 1/ 2 / 4 / 4;
+    grid-area: 2/ 3 / 5 / 5;
     border-color: #618B6A;
     border-style: dashed;
     border-width: 0.5em;
@@ -641,7 +645,7 @@ section > *{
 }
 
 #previously{
-    grid-area: 3/ 5 / 6 / 7;
+    grid-area: 4/ 5 / 7 / 8;
     border-color: #618B6A;
     border-style: dashed;
     border-width: 0.5em;
@@ -726,8 +730,11 @@ nav:nth-child(2){
 
 }
 
+
 .resume-section.disp > * {
     padding: 10px;
+    
+    margin-right: 150px;
     /* transition: all 0.5s  step-end; */
 }
 .resume-section.disp > div > ul > *  {
@@ -738,4 +745,13 @@ nav:nth-child(2){
 
 #soundtrack{
     grid-area: 5/5/5/10;
+}
+
+#resume-summary > *{
+    margin-bottom: 2em;
+}
+
+#previously > ul >*{
+    margin-bottom: -0.1em !important;
+    padding: 0em !important;
 }

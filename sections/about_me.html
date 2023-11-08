@@ -30,8 +30,8 @@
     <div class = "line"></div>
 
     <button id = "summary-button" class="timeline-button selected" onclick = "displayCareerTimeline(this,'summary')"></button>
-    <button id = "currently-button" class="timeline-button" onclick = "displayCareerTimeline(this,'currently')"></button>
     <button id = "previously-button" class="timeline-button" onclick = "displayCareerTimeline(this,'previously')"></button>
+    <!-- <button id = "currently-button" class="timeline-button" onclick = "displayCareerTimeline(this,'currently')"></button> -->
     <button id = "other-button" class="timeline-button" onclick = "displayCareerTimeline(this,'other')"></button>
     <button id = "education-button" class="timeline-button" onclick = "displayCareerTimeline(this,'education')"></button>
     <div id = "summary" class = "summary timeline-content visible">
@@ -102,20 +102,7 @@
             <img src = "img/logos/postman-svgrepo-com.svg" class = "tech-icon">
         </figure>
     </div>
-    <div id = "currently" class = 'currently timeline-content'>
-        Currently, I work at <b>Nomi Health</b> as the <b>Senior Data Platform Lead</b> .
 
-    </div>    
-    
-    <div id = "previously" class = 'currently timeline-content'>
-        Previous sectors i have domain experience in
-        <ul>
-            <li>Energy</li>
-            <li>Utilies</li>
-            <li>Finance</li>
-            <li>Research</li>
-        </ul>
-    </div>
     <div id = "hats" class = "previously timeline-content " >
         <img src = "img/hat_colored.svg"   class = "tech-icon selected" data-target = "resume-summary" onclick="hat(this)"/>
         <img src = "img/hat_black.svg"   class = "tech-icon" data-target="data-manager" onclick="hat(this)"/>
@@ -127,10 +114,25 @@
     </div>
     <div id = "resume-summary" class = "previously timeline-content resume-section disp">
         <h1> Interactive Resume</h1>
+
+        <div id = "currently" class ="previously timeline-content disp">
+            Currently, I work at <b>Nomi Health</b> as the <b>Senior Data Platform Lead</b> .
+    
+        </div>    
+        
+        <div id = "previously" class = "previously timeline-content disp">
+            Previous sectors i have domain experience in
+            <ul>
+                <li>Energy</li>
+                <li>Utilies</li>
+                <li>Finance</li>
+                <li>Research</li>
+            </ul>
+        </div>
+
         <div>
             Working at primarily small companies and startups makes you wear a ton of hats!
             Click the hats to the left to learn more about the various hats I have worn!
-
         </div>
     </div>
     <div id = "data-manager" class = "previously timeline-content resume-section">
@@ -184,7 +186,6 @@
             <ul>
                 <li>Optimized and rearchitected data pipelines in Snowflake, resulting in a 67% 
                     ($250,000/yr) reduction in operational spend. </li>
-                <li></li>
             </ul>
         </div>
     </div>    
