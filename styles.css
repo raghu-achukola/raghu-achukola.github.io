@@ -345,10 +345,10 @@ button.c2b{
 
 
 .animated-page{
-    opacity: 0.2;
-    background-color: #080d0e ! important;
+    /* opacity: 0.2; */
+    /* background-color: #080d0e ! important; */
     /* transform: translateX(-100%); */
-    transition: all 0.5s ease-in-out ;
+    transition: all 0.5s ease-in-out, background-color 0s ;
     scroll-snap-align: start;
     /* scroll-snap-stop: always; */
 }
@@ -601,7 +601,7 @@ section > *{
 } */
 .timeline-content{
     opacity:1 ! important;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     user-select:auto !important;
 }
 
@@ -782,3 +782,9 @@ nav:nth-child(2){
     cursor: pointer;
 }
 
+#scroll-navigator.hidden{
+    width:0px;
+    height:0px;
+    opacity:0;
+    z-index: -1;
+}
