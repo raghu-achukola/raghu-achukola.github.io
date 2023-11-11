@@ -595,11 +595,11 @@ section > *{
     max-height: 40px;
 }
 
-.timeline-content {
-    opacity:0;
+/* .timeline-content {
+    opacity:0.2;
     user-select: none;
-}
-.timeline-content.visible{
+} */
+.timeline-content{
     opacity:1 ! important;
     transition: all 0.5s ease-in-out;
     user-select:auto !important;
@@ -755,3 +755,30 @@ nav:nth-child(2){
     margin-bottom: -0.1em !important;
     padding: 0em !important;
 }
+
+
+.scroll-navigator {
+    background:rgba(191, 87, 0,0.3 );
+    position: fixed;
+    right: 5vw; /* Adjust the left position as needed */
+    bottom: 10vh;
+    width:5px;
+    height: 50vh;
+    /* transform: translate(0, -50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+
+#scroll-navigator > .nav-circle{
+    width: 10px;
+    height: 10px;
+    margin-bottom: 10vh;
+    background-color: #fff;
+    opacity: 0.9 !important;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Adjust the spacing between circles as needed */
+    cursor: pointer;
+}
+

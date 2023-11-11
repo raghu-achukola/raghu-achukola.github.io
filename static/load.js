@@ -77,11 +77,12 @@ function loadPage(element){
                 set_arrow_nav();
             }
             else if (element.id.substring(8) == 'about_me'){
-                loadIntersectionObserver()
+                loadIntersectionObserver();
             }
             else{
                 handleOverflow(false)
             }
+            toggleNav();
         });
 }
 
@@ -191,3 +192,55 @@ function hat(element){
 function meowNow(){
     console.log('Meow')
 }
+
+
+
+function toggleNav(){
+
+    const navigator = document.getElementById('scroll-navigator');
+    const sections = document.querySelectorAll('section');
+    console.log(sections)
+    // function scrollToSection(index) {
+    //     const targetSection = sections[index];
+    //     targetSection.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+    //   }
+    navigator.innerHTML = '';
+    if (sections.length == 0){ navigator.classList.add('hidden'); return;}
+    navigator.classList.remove('hidden')
+    sections.forEach((section, index) => {
+      const circle = document.createElement('div');
+      console.log(section.id)
+      circle.classList.add('nav-circle');
+    // //   circle.href = `#${section.id}`
+    //   console.log('2')
+    //   console.log(`Section ${section.id}`)
+      circle.addEventListener('click', () => {
+        console.log(index);
+        section.scrollIntoView({ block: 'end',  behavior: 'smooth' })
+        console.log(sections)
+      });
+      navigator.delete
+      navigator.appendChild(circle);
+    });
+  
+
+  
+    // Optionally, update the navigator circles based on scroll position
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+  
+      sections.forEach((section, index) => {
+        if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+          highlightCircle(index);
+        }
+      });
+    });
+  
+    function highlightCircle(index) {
+      const circles = navigator.getElementsByClassName('nav-circle');
+      for (let i = 0; i < circles.length; i++) {
+        circles[i].style.backgroundColor = i === index ? '#e74c3c' : '#3498db';
+      }
+    }
+}
+  
