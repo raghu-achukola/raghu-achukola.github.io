@@ -147,28 +147,6 @@ function resetImg(){
 }
 
 
-function displayCareerTimeline(selectedButton,classToDisplay){
-    let buttons = document.getElementsByClassName('timeline-button');
-    for (let index = 0; index<buttons.length;index++){
-        let button = buttons[index];
-        button.classList.remove('selected')
-    }
-    selectedButton.classList.add('selected')
-    let content = document.getElementsByClassName('timeline-content');
-    for (let index = 0; index < content.length; index++) {
-        let element = content[index];
-        console.log(element);
-        if (element.classList.contains(classToDisplay)){
-            element.classList.add('visible')
-        }
-        else{
-            element.classList.remove('visible')
-        }
-    }
-
-
-}
-
 function hat(element){
     console.log('a')
     const hats = document.getElementById('hats').getElementsByTagName('*')
@@ -186,13 +164,6 @@ function hat(element){
     displayTarget.classList.add('disp')
     // element.src="img/hat_colored.svg"
 }
-
-
-
-function meowNow(){
-    console.log('Meow')
-}
-
 
 
 function toggleNav(){
