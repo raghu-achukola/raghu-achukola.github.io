@@ -194,25 +194,6 @@ section > *{
 
 
 /* PROJECTS*/ 
-
-
-.projects-screen{
-    flex:1;
-    height: 100vh;
-    max-height: 100vh;
-    max-width: 90vw;
-    overflow: auto;
-}
-
-.project-header{
-    height: 50vh;
-    width: 100vh;
-}
-.project-footer{
-    height:50vh;
-    width:100vh;
-}
-
 #project-autumn{
     background-image: url('/img/autumn.gif');
 }
