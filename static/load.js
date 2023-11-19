@@ -126,8 +126,8 @@ function move_track(track, distance){
             console.log(`New index: ${newIndex}`)
             imgs[activeIndex].classList.remove('active')
             imgs[newIndex].classList.add('active')
-            track.style.left = `${25-newIndex*50}%`
-            track.style.width = `${75 + newIndex*50}%`
+            track.style.setProperty('--current-selected',newIndex)
+
             break;
         }
     }
