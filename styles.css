@@ -1,7 +1,17 @@
-/* GLOBAL*/
 
+/* GLOBAL*/
+ /*
+    WISTERIA #c1ade0   
+    CHAMPAGNE #ffe4c4 
+    CELADON ADE0B8   
+    VIRIDIAN 618B6A 
+    VIRIDIAN x CELADON => 87BC91
+    WISTERIA x CHAMPAGNE => d8c8d2  -> 
+*/
 :root{
-    --brand-color-dark-blue: "#222A35";
+    --brand-color-dark-blue: #222A35;
+    --brand-color-champagne: #ffe4c4;
+    --brand-color-wistagne: #d8c8d2;
 }
 
 @property --current-selected {
@@ -26,7 +36,7 @@ section{
     min-height: 100vh;
     height:100vh;
     min-width: 90vw;
-    color: #d8c8d2;
+    /* color: var(--brand-color-champagne); */
 } 
 section > *{
     padding: 0.5em;
@@ -46,15 +56,17 @@ section > *{
     scrollbar-width: none;
 }
 
+
 /* TWO-COLUMNS*/ 
 #left-column {
+    /*COLOR-PAIR -> BLACK, CHAMPAGNE*/
     display: flex;
     overflow: none;
     flex-direction: column;
     flex: 1;
     /* max-height: 100vh; */
     background: black;
-    color: bisque; 
+    color: var(--brand-color-champagne);
     padding: 15px;
     position: sticky;
 }
@@ -105,8 +117,9 @@ section > *{
 }
 
 .site-section{
+    /* COLOR-PAIR -> BLACK, CHAMPAGNE*/
     background: black;
-    color: bisque;
+    color: var(--brand-color-champagne);
     text-align: start;
     border: none;
     font-weight: bold;
@@ -126,7 +139,7 @@ section > *{
 
 
 .fa {
-    color:bisque;
+    color:var(--brand-color-champagne);
     font-size: 10px;
     width: 10px;
     margin-right:10px;
@@ -224,6 +237,7 @@ section > *{
     width: 50vw;
     height: 60vh;
     object-fit: cover;
+    background-color: none !important;
     border-radius: 5%;
     opacity:0.2;
     z-index:10;
@@ -252,14 +266,7 @@ section > *{
 }
 
 
- /*
-    WISTERIA #c1ade0   
-    CHAMPAGNE #ffe4c4 
-    CELADON ADE0B8   
-    VIRIDIAN 618B6A 
-    VIRIDIAN x CELADON => 87BC91
-    WISTERIA x CHAMPAGNE => d8c8d2  -> 
-*/
+
 
 /* CONTACT ME*/ 
 
@@ -299,12 +306,10 @@ div.c2a > div{
 }
 .info-header{
     font-weight:bold;
-    font-family: 'Segoe UI';
 }
 .info-info{
-    font-family: 'Segoe UI';
     font-size: small;
-    color:#d8c8d2;
+    color: var(--brand-color-wistagne);
     margin-top: 0.5em;
 }
 
@@ -323,17 +328,13 @@ div.c2a > div{
     gap:1em;
     justify-content: space-between;
     flex-direction: column;
-    
 }
 
 #contact-container > div{
-    margin-left:1em;
-    margin-top:1em;
-    margin-right:1em;
+    margin: 1em; 
     padding:2em;
     background-color: #080d0e;
     color:bisque;
-
 }
 
 /* ABOUT ME */ 
@@ -341,43 +342,36 @@ div.c2a > div{
 .animated-page{
     transition: all 0.5s ease-in-out, background-color 0s ;
     scroll-snap-align: start;
+    overflow: none !important;
 }
-
+.animated-page.on-screen{
+    opacity: 1;
+}
 .animated-page.introduction.on-screen
-{   opacity: 1;
+{   
     background-color: #080d0e !important;
     color: #d8c8d2
-
 }
-
 .animated-page.career.on-screen
-{   opacity: 1;
-    background-color: #ffe4c4 !important;
-    color: #222d35;
-
+{  
+    background-color: var(--brand-color-champagne) !important;
 }
-
 .animated-page.other-work.on-screen
-{   opacity: 1;
+{   
     background-color: #c1ade0 !important;
     color: #d8c8d2;
-
 }
 
 .animated-page.interests.on-screen
-{   opacity: 1;
+{   
     background-color: #6F4E37 !important;
     color: #ffe4c4;
-
 }
-
 .animated-page.quadball.on-screen
-{   opacity: 1;
+{   
     background-color:  #618B6A !important;
     color: #222d35;
-
 }
-
 #hats{
     display: flex;
     width: 60vw;
@@ -385,7 +379,6 @@ div.c2a > div{
     z-index: 100;
     justify-content: space-between;
 }
-
 #stack{
     border-radius: 12px;
     border-style: dashed;
@@ -400,7 +393,6 @@ div.c2a > div{
     transform: translateY(-10%);
 }
 
-
 #about_me_container{
     display: flex;
     flex-direction: column;
@@ -409,48 +401,31 @@ div.c2a > div{
     scroll-snap-type: y proximity;
 }  
 
-
-.introduction .page-header{
-    grid-area: 1 / 1 / 3 / 5 ;
-    color: #ffe4c4
-}
-
-.interests .page-header{
+.page-header{
     grid-area: 1 / 1 / 2 / 4 ;
-    color: #ffe4c4
-}
-.quadball .page-header{
-    grid-area: 1 / 1 / 2 / 4 ;
-    color: #ffe4c4
+    color: var(--brand-color-champagne)
 }
 
+.introduction.page-header{
+    translate: 0% 10vh;
+}
 
 .introduction .main-picture{
     grid-area: 3 / 7 / 4 / 8;
     max-height: 60vh;
     border-radius: 15%;
-    opacity:0.9;
+    opacity:1;
     border-style: ridge;
     border-color: #618B6A;
 }
 
-
 .introduction .festival{
     grid-area: 2 / 7 / 4 / 8;
-    transform: translateY(5%);
 }
 
-.introduction .main-picture:hover{
-    opacity:1;
-}
 
-.animated-page.career{
-    overflow:none !important
-}
-
-.career .page-header{
-    grid-area: 1 / 1 / 2 / 4 ;
-    color: #222d35
+.career{
+    color:#222A35 !important
 }
 
 .career .main-picture{
@@ -461,7 +436,6 @@ div.c2a > div{
     border-style: ridge;
     border-color: #618B6A;
     transform: translate(-10%,5%);
-
 }
 
 #about-block{
@@ -470,9 +444,7 @@ div.c2a > div{
     justify-content: space-evenly;
     align-items: stretch;
     grid-area: 3 / 3 / 5 / 5;
-    transform: translate(0%,0%);
     height: 80vh;
-    min-height: 80vh;
     width: 50vh;
 }
 
@@ -487,23 +459,10 @@ div.c2a > div{
     border-width: 0.5em;
 }
 
-#technologies{
-    display: inline-block;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    grid-area: 1/8/6/9;
-    min-height: 100vh;
-    min-width:10vw;
-    transform:translate(-5%,0%);
-    font-weight: bolder;
-}
-
 .tech-icon{
     max-width: 40px;
     max-height: 40px;
 }
-
 
 .timeline-content{
     opacity:1 ! important;
@@ -527,28 +486,6 @@ section.animated-page > h1{
     border-color: #bf5700;
     border-style: dashed;
     border-width: 0.5em;
-}
-
-#interest-box{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-    grid-area: 3/5/3/5;
-    width: 90vw;
-    height: 60vh;
-
-}
-
-.brad-list{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height:100%;
-    width: 15vw;
-    border:#618B6A;
-    border-style: dotted;
-    border-width: 0.5em;
-    border-radius:10%;
 }
 
 .education.main-picture{
@@ -581,7 +518,6 @@ section.animated-page > h1{
 #lead-instructor > *{
     padding-left: 0.5em;
     padding-right: 0.5em;
-
 }
 
 #gameplay-director{
@@ -618,10 +554,6 @@ section.animated-page > h1{
 .resume-section.disp > div > ul > *  {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-#soundtrack{
-    grid-area: 5/5/5/10;
 }
 
 #resume-summary > *{
