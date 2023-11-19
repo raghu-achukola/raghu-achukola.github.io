@@ -23,6 +23,12 @@ body, h1, div, h2, p {
     /* overflow: none; */
 }
 
+.container::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
 #left-column {
     display: flex;
     overflow: none;
