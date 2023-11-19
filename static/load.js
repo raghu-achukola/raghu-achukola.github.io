@@ -30,7 +30,6 @@ function loadIntersectionObserver(){
 
 
 function insertSectionHTML(html){
-    // console.log(html)
     let sectionElement = document.querySelector("#section-content");
     sectionElement.innerHTML = ""
     sectionElement.insertAdjacentHTML(
@@ -45,34 +44,18 @@ async function get_page_html(location){
     return page_html
 }
 
-function mouseScroll(){
-    const track = document.getElementById("project-track");
-    // window.onmousedown = e => {
-    //     track.dataset.mouseDownAt = e.clientX;
-    // }
-    // window.onmousemove = e => {
-    //     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-    //         maxDelta = window.innerWidth/2;
-    //     const percentage = (mouseDelta/maxDelta)*100;
-    //     const width = (-percentage + 75)
-    //     track.style.transform = `translate(${percentage}%,0%)`;
-    //     track.style.width = `${width}%`
-    // }
-
-    
-}
 
 function handleOverflow(hide){
     const rightSection = document.getElementById('right-column');
     rightSection.style.zIndex =  hide? -1 : 1;
 }
+
 function loadPage(element){
     const page_location = `sections/${element.id.substring(8)}.html`;
     get_page_html(page_location).then(
         page_html => {
             insertSectionHTML(page_html);
             if (element.id.substring(8) == 'projects'){
-                mouseScroll();
                 handleOverflow(true);
                 set_arrow_nav();
             }
@@ -87,25 +70,18 @@ function loadPage(element){
 }
 
 function set_arrow_nav(){
-
     const track = document.getElementById("project-track");
-
     function checkKey(e) {
-
-        const projectList = document.querySelectorAll('#project-track.project-img.active')
-
         if (e.keyCode == '37') {
         // left arrow
-            console.log('LEFT')
-            
-            move_track(track,-1)
+            console.log('LEFT');
+            move_track(track,-1);
         }
         else if (e.keyCode == '39') {
         // right arrow
-            console.log('RIGHT')
-            move_track(track,1)
+            console.log('RIGHT');
+            move_track(track,1);
         }
-
     }
     document.onkeydown = checkKey;
 }
@@ -134,18 +110,11 @@ function move_track(track, distance){
 
 }
 
-
 function loadImg(element){
     const PIC_FRAME = document.getElementById( "introduction-profile-picture" )
     const newImgSrc = element.getAttribute("loadimg")
     PIC_FRAME.src = newImgSrc
 }
-
-function resetImg(){
-    // const PIC_FRAME = document.getElementById( "introduction-profile-picture" )
-    // PIC_FRAME.src = PIC_FRAME.getAttribute("defaultSrc")
-}
-
 
 function hat(element){
     console.log('a')
@@ -162,7 +131,6 @@ function hat(element){
     console.log(displayTarget)
     currentDisplay.classList.remove('disp')
     displayTarget.classList.add('disp')
-    // element.src="img/hat_colored.svg"
 }
 
 
@@ -171,10 +139,6 @@ function toggleNav(){
     const navigator = document.getElementById('scroll-navigator');
     const sections = document.querySelectorAll('section');
     console.log(sections)
-    // function scrollToSection(index) {
-    //     const targetSection = sections[index];
-    //     targetSection.scrollIntoView({ block: 'end',  behavior: 'smooth' });
-    //   }
     navigator.innerHTML = '';
     if (sections.length == 0){ navigator.classList.add('hidden'); return;}
     navigator.classList.remove('hidden')
@@ -182,9 +146,6 @@ function toggleNav(){
       const circle = document.createElement('div');
       console.log(section.id)
       circle.classList.add('nav-circle');
-    // //   circle.href = `#${section.id}`
-    //   console.log('2')
-    //   console.log(`Section ${section.id}`)
       circle.addEventListener('click', () => {
         console.log(index);
         section.scrollIntoView({ block: 'end',  behavior: 'smooth' })
@@ -195,8 +156,6 @@ function toggleNav(){
     });
   
 
-  
-    // Optionally, update the navigator circles based on scroll position
     window.addEventListener('scroll', function() {
       const scrollPosition = window.scrollY;
   
