@@ -1,0 +1,10 @@
+#interests{
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    grid-template-areas:"nn hd ee ee ee ee"
+                        "-- -- -- -- -- --"
+                        "-- -- -- -- -- --"
+                        "-- -- -- -- -- --"
+                        "-- -- -- -- -- --";
+} 
