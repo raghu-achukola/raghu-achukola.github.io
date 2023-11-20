@@ -10,11 +10,7 @@
                         "nn mn mn mn mn mn";
 } 
 
-.page-header{
-    grid-area: hd;
-    justify-self: center;
-    color: var(--brand-color-champagne)
-}
+
 
 #about-block{
     display: flex;

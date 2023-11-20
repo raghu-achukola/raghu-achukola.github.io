@@ -13,11 +13,7 @@
                         "nn ht ht ht -- ";
     align-items: center center;
 } 
-section.animated-page > h1{
-    grid-area: hd;
-    place-self: end start;
-    /* translate: 0% 40%; */
-}
+
 #hats{
     display: flex;
     width: 60vw;

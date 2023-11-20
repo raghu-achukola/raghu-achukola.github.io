@@ -6,6 +6,7 @@
     flex-direction: column;
     overflow-y: auto !important;
     height:100vh;
+    width: 90vw;
     scroll-snap-type: y proximity;
 }  
 
@@ -33,6 +34,16 @@
     color: #ffe4c4;
 }
 
+.page-header{
+    grid-area: hd;
+    justify-self: center;
+    color: var(--brand-color-champagne)
+}
+section.animated-page > h1{
+    grid-area: hd;
+    place-self: end start;
+    /* translate: 0% 40%; */
+}
 .about-info-block{
     font-size: 1.2rem;
 }
