@@ -1,0 +1,36 @@
+/* GRIDS */ 
+#introduction{
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    grid-template-areas:"nn hd ee ee ee ee"
+                        "nn bd bd -- -- --"
+                        "nn bd bd -- -- --"
+                        "nn bd bd -- -- --"
+                        "nn mn mn mn mn mn";
+} 
+
+.page-header{
+    grid-area: hd;
+    justify-self: center;
+    color: var(--brand-color-champagne)
+}
+
+#about-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    grid-area: bd;
+    height: 60vh;
+    /* width: 50vh; */
+}
+
+.introduction .main-picture{
+    grid-area: --;
+    max-height: 60vh;
+    border-radius: 15%;
+    opacity:1;
+    border-style: ridge;
+    border-color: #618B6A;
+}

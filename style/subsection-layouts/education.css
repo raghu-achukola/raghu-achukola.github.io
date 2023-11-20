@@ -1,0 +1,28 @@
+
+/*EDUCATION*/ 
+
+#education-section{
+    display: grid;
+    grid-template-columns: 10vw 30vw 10vw 30vw 10vw;
+    grid-template-rows: 20vh 20vh 30vh 20vh 10vh;
+    grid-template-areas:"nn hd ee ee -- "
+                        "nn ed aa pp -- "
+                        "nn cl aa pp -- "
+                        "nn cl aa pp -- "
+                        "nn mn mn pp -- ";
+    align-items: center center;
+}
+#education{
+    grid-area: ed;
+    border-color: #bf5700;
+    border-style: dashed;
+    border-width: 0.5em;
+}
+.education.main-picture{
+    grid-area: pp;
+    border-color: #bf5700;
+    max-height: 60vh;
+    border-radius: 15%;
+    opacity:0.9;
+    border-style: ridge;
+}

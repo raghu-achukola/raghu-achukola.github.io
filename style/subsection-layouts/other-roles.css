@@ -1,0 +1,41 @@
+
+/* OTHER ROLES */ 
+#other-roles{
+    display: grid;
+    grid-template-columns: 10vw 25vw 15vw 25vw 15vw ;
+    grid-template-rows: 15vh 20vh 15vh 15vh 20vh 15vh;
+    grid-template-areas:"nn hd ee ee -- "
+                        "nn h1 ct b2 -- "
+                        "nn b1 ct b2 -- "
+                        "nn b1 ct b2 -- "
+                        "nn b1 ct h2 -- "
+                        "nn ht ht ht -- ";
+    align-items: center center;
+} 
+
+.other-header{
+    border-color: #618B6A;
+    border-style: dashed;
+    border-width: 0.2em;
+}
+
+#lead-instructor{
+    grid-area: h1;
+    place-self: center start;
+    padding:0.5em;
+
+}
+#lead-instructor-body{ grid-area: b1; place-self: start start;}
+/* #lead-instructor > *{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+} */
+
+#gameplay-director{
+    grid-area: h2;
+    place-self: center end;
+}
+
+#gameplay-director-body{ grid-area: b2; place-self: start start;}
+
+

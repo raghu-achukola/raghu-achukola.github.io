@@ -1,0 +1,60 @@
+
+
+/* CONTACT ME*/ 
+
+button.c2a{
+    flex:1;
+    position: relative;
+    color: #618B6A;
+    bottom: 0%;
+    background-color: #222d35;
+    padding: 1em;
+    border-radius: 7%;
+    font-size: 1rem;
+    height:10vh;
+    width: 10vw;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    border-style:dashed;
+    border-color:#618B6A ;
+    align-self: center;
+}
+
+div.c2a > div{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.info-header{
+    font-weight:bold;
+}
+.info-info{
+    font-size: small;
+    color: var(--brand-color-wistagne);
+    margin-top: 0.5em;
+}
+
+.contact{
+    display: flex;
+    flex: 1;
+    opacity: 1;
+}
+
+.c2a:hover{
+    opacity: 0.3;
+}
+
+#contact-container{
+    display: flex;
+    gap:1em;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#contact-container > div{
+    margin: 1em; 
+    padding:2em;
+    background-color: #080d0e;
+    color:bisque;
+}
