@@ -62,6 +62,7 @@ section > *{
     max-width: 90vw;
     z-index: 1;
     overflow-y: hidden;
+    overflow-x:hidden;
 }
 
 /* LEFT COLUMN*/ 
@@ -169,6 +170,9 @@ section > *{
     z-index: -1;
 }
 
+.nav-circle.nav-selected{
+    background-color: var(--brand-color-dark-blue) !important;
+}
 
 /* USED MULTIPLE*/
 

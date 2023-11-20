@@ -135,42 +135,46 @@ function hat(element){
 
 
 function toggleNav(){
-
     const navigator = document.getElementById('scroll-navigator');
+    const nc = document.querySelector('.navsec-container')
     const sections = document.querySelectorAll('section');
-    console.log(sections)
     navigator.innerHTML = '';
-    if (sections.length == 0){ navigator.classList.add('hidden'); return;}
+    if (sections.length == 0){ navigator.classList.add('hidden'); console.log('NAVIGATOR CLASSLIST HIDDEN');return;}
     navigator.classList.remove('hidden')
+    let switches = [-200]
     sections.forEach((section, index) => {
+      if (switches.length == 1) { switches.push(section.offsetHeight*2/3)}
+      else{ switches.push(switches[switches.length-1]+section.offsetHeight)}
       const circle = document.createElement('div');
-      console.log(section.id)
       circle.classList.add('nav-circle');
       circle.addEventListener('click', () => {
-        console.log(index);
         section.scrollIntoView({ block: 'end',  behavior: 'smooth' })
-        console.log(sections)
       });
-      navigator.delete
       navigator.appendChild(circle);
     });
-  
+    
 
-    window.addEventListener('scroll', function() {
-      const scrollPosition = window.scrollY;
-  
-      sections.forEach((section, index) => {
-        if (scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-          highlightCircle(index);
+    nc.addEventListener('scroll', function(event) {
+        sections.forEach( section => {
+            
+            const scrollPosition = nc.scrollTop;
+            for (let i = 0; i < switches.length-1; i++) {
+                if (scrollPosition > switches[i] && scrollPosition < switches[i+1]){
+                    highlightCircle(i,true)
+                }
+                else{
+                    highlightCircle(i,false)
+                }
+            }
+    
         }
-      });
+        )
     });
   
-    function highlightCircle(index) {
+    function highlightCircle(index, selected) {
       const circles = navigator.getElementsByClassName('nav-circle');
-      for (let i = 0; i < circles.length; i++) {
-        circles[i].style.backgroundColor = i === index ? '#e74c3c' : '#3498db';
-      }
+      if (selected) {circles[index].classList.add('nav-selected')}
+      else{circles[index].classList.remove('nav-selected')}
     }
 }
   
