@@ -27,135 +27,23 @@
 {  
     background-color: var(--brand-color-champagne) !important;
 }
-
 .animated-page.interests.on-screen
 {   
     background-color: #6F4E37 !important;
     color: #ffe4c4;
 }
 
-/* GRIDS */ 
-#introduction{
-    display: grid;
-    grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
-    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
-    grid-template-areas:"nn hd ee ee ee ee"
-                        "nn bd bd -- -- --"
-                        "nn bd bd -- -- --"
-                        "nn bd bd -- -- --"
-                        "nn mn mn mn mn mn";
-} 
-
-.page-header{
-    grid-area: hd;
-    justify-self: center;
-    color: var(--brand-color-champagne)
-}
-
-#about-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
-    grid-area: bd;
-    height: 60vh;
-    /* width: 50vh; */
-}
-
-.introduction .main-picture{
-    grid-area: --;
-    max-height: 60vh;
-    border-radius: 15%;
-    opacity:1;
-    border-style: ridge;
-    border-color: #618B6A;
-}
-
 .about-info-block{
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-
-/* CAREER*/ 
-#career{
-    display: grid;
-    grid-template-columns: 10vw 20vw 25vw 20vw 15vw ;
-    grid-template-rows: 15vh 20vh 20vh 20vh 20vh 5vh;
-    grid-template-areas:"oo hd ee ee ee "
-                        "nn sm sm sm -- "
-                        "nn st st st -- "
-                        "nn st st st -- "
-                        "nn st st st -- "
-                        "nn mn mn mn -- ";
-    align-items: center center;
-} 
 .career{
     color:#222A35 !important
 }
 
-#summary{
-    grid-area: sm;
-    font-size: larger;
-    /* translate: 0% -35%; */
-}
-
-#stack{
-    border-radius: 12px;
-    border-style: dashed;
-    border-color: #bf5700;
-    border-width: 0.2em;
-    display: flex;
-    flex-wrap: wrap;
-    height: 50vh;
-    grid-area: st;
-    justify-content: space-evenly;
-    align-items: stretch;
-    /* transform: translateY(-10%); */
-}
 .tech-icon{
     max-width: 40px;
     max-height: 40px;
-}
-
-/*RESUME*/ 
-
-#resume{
-    display: grid;
-    grid-template-columns: 10vw 20vw 25vw 20vw 15vw ;
-    grid-template-rows: 15vh 15vh 20vh 20vh 15vh 15vh;
-    grid-template-areas:"nn ct ct ct -- "
-                        "nn ct ct ct -- "
-                        "nn ct ct ct -- "
-                        "nn ct ct ct -- "
-                        "nn ct ct ct -- "
-                        "nn ht ht ht -- ";
-    align-items: center center;
-} 
-section.animated-page > h1{
-    grid-area: hd;
-    place-self: end start;
-    /* translate: 0% 40%; */
-}
-#hats{
-    display: flex;
-    width: 60vw;
-    grid-area: ht;
-    z-index: 100;
-    justify-content: space-between;
-}
-
-#currently{
-    grid-area: 2/ 3 / 5 / 5;
-    border-color: #618B6A;
-    border-style: dashed;
-    border-width: 0.5em;
-}
-
-#previously{
-    grid-area: 4/ 5 / 7 / 8;
-    border-color: #618B6A;
-    border-style: dashed;
-    border-width: 0.5em;
 }
 
 .timeline-content{
@@ -169,42 +57,3 @@ section.animated-page > h1{
 }
 
 
-
-
-
-.resume-section{
-    grid-area:ct;
-    height: 100%;
-    width: 100%;
-    place-self: start;
-
-    translate: 5% 10%;
-    user-select: none;
-    color: #ffe4c4;
-    z-index: -1;
-}
-
-.resume-section.disp{
-    color: #080d0e;
-    z-index: 1;
-    user-select: auto;
-    transition: all 0.5s ease-in-out;
-}
-
-.resume-section.disp > * {
-    padding: 10px;
-    margin-right: 150px;
-}
-.resume-section.disp > div > ul > *  {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#resume-summary > *{
-    margin-bottom: 2em;
-}
-
-#previously > ul >*{
-    margin-bottom: -0.1em !important;
-    padding: 0em !important;
-}

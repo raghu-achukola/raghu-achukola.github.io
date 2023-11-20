@@ -30,7 +30,7 @@ div.c2a > div{
     font-weight:bold;
 }
 .info-info{
-    font-size: small;
+    font-size: 0.75rem;
     color: var(--brand-color-wistagne);
     margin-top: 0.5em;
 }
@@ -47,7 +47,7 @@ div.c2a > div{
 
 #contact-container{
     display: flex;
-    gap:1em;
+    /* gap:1em; */
     justify-content: space-between;
     flex-direction: column;
 }
