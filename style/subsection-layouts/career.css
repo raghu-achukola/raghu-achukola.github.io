@@ -1,0 +1,33 @@
+/* CAREER*/ 
+#career{
+    display: grid;
+    grid-template-columns: 10vw 20vw 25vw 20vw 15vw ;
+    grid-template-rows: 15vh 20vh 20vh 20vh 20vh 5vh;
+    grid-template-areas:"oo hd ee ee ee "
+                        "nn sm sm sm -- "
+                        "nn st st st -- "
+                        "nn st st st -- "
+                        "nn st st st -- "
+                        "nn mn mn mn -- ";
+    align-items: center center;
+} 
+
+#summary{
+    grid-area: sm;
+    font-size: 1.25rem;
+    /* translate: 0% -35%; */
+}
+
+#stack{
+    border-radius: 12px;
+    border-style: dashed;
+    border-color: #bf5700;
+    border-width: 0.2em;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    grid-area: st;
+    justify-content: space-evenly;
+    align-items: stretch;
+    /* transform: translateY(-10%); */
+}

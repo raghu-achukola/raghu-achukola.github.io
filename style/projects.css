@@ -1,0 +1,60 @@
+
+@property --current-selected {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+
+/* PROJECTS*/ 
+#project-autumn{
+    background-image: url('/img/autumn.gif');
+}
+#project-quadball{
+    background-image: url('/img/quadball.gif');
+}#project-mednlp{
+    background-image: url('/img/mednlp.gif');
+}#project-motheory{
+    background-image: url('/img/motheory.gif');
+}
+
+#prj{
+    display: block;
+    height: 100vh;
+    width: 90vw;
+    max-width: 90vw;
+    background-color: black;
+    margin: 0rem;
+}
+
+#project-track > .project-img{
+    width: 50vw;
+    height: 60vh;
+    object-fit: cover;
+    background-color: none !important;
+    border-radius: 5%;
+    opacity:0.2;
+    z-index:10;
+}
+
+#project-track > .project-img.active{
+    opacity:1;
+    width: 60vw;
+    height:70vh;
+
+}
+
+#project-track{
+    display: flex;
+    align-items: center;
+    gap:4vmin;
+    position:absolute;
+    --current-selected:0;
+    left: calc(25% - var(--current-selected)*50%);
+    top:20%;
+    height: 70vh;
+    overflow : hidden !important;
+    width: calc(75% + var(--current-selected)*50%);
+
+    
+}

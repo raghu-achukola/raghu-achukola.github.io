@@ -1,0 +1,79 @@
+
+/*RESUME*/ 
+
+#resume{
+    display: grid;
+    grid-template-columns: 10vw 20vw 25vw 20vw 15vw ;
+    grid-template-rows: 15vh 15vh 20vh 20vh 15vh 15vh;
+    grid-template-areas:"nn ct ct ct -- "
+                        "nn ct ct ct -- "
+                        "nn ct ct ct -- "
+                        "nn ct ct ct -- "
+                        "nn ct ct ct -- "
+                        "nn ht ht ht -- ";
+    align-items: center center;
+} 
+section.animated-page > h1{
+    grid-area: hd;
+    place-self: end start;
+    /* translate: 0% 40%; */
+}
+#hats{
+    display: flex;
+    width: 60vw;
+    grid-area: ht;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+#currently{
+    border-color: #618B6A;
+    border-style: dashed;
+    border-width: 0.5em;
+}
+
+#previously{
+    border-color: #618B6A;
+    border-style: dashed;
+    border-width: 0.5em;
+}
+
+
+
+
+.resume-section{
+    grid-area:ct;
+    height: 100%;
+    width: 100%;
+    place-self: start;
+
+    translate: 5% 10%;
+    user-select: none;
+    color: #ffe4c4;
+    z-index: -1;
+}
+
+.resume-section.disp{
+    color: #080d0e;
+    z-index: 1;
+    user-select: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.resume-section.disp > * {
+    padding: 10px;
+    margin-right: 150px;
+}
+.resume-section.disp > div > ul > *  {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#resume-summary > *{
+    margin-bottom: 2em;
+}
+
+#previously > ul >*{
+    margin-bottom: -0.1em !important;
+    padding: 0em !important;
+}
