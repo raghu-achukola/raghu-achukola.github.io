@@ -246,14 +246,7 @@ section > *{
     
 }
 
-
-
-
 /* CONTACT ME*/ 
-
-.vertical-flex{
-    flex-direction: column !important;
-}
 
 button.c2a{
     flex:1;
