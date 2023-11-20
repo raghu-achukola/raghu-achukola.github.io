@@ -171,7 +171,7 @@ section > *{
 }
 
 .nav-circle.nav-selected{
-    background-color: #222A35 !important;
+    background-color: var(--brand-color-dark-blue) !important;
 }
 
 /* USED MULTIPLE*/
